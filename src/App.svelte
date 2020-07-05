@@ -1,8 +1,17 @@
 <script>
-  export let name;
+  import Input from "./Input.svelte";
+
+  let logo = "./img/logo.png";
+  let example = "./img/example.jpg";
+  let icon = "./img/icon.png";
+  let icon2x = "./img/icon2x.png";
+
+  let label = "experimental";
+  let file = example;
+  let fileUrl = null;
 </script>
 
-<h1>Hello, {name}</h1>
+<Input placeholder="Hello" bind:value={label} />
 
 <style lang="scss">
   @font-face {
