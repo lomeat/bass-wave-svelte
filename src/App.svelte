@@ -1,5 +1,8 @@
 <script>
   import Input from "./Input.svelte";
+  import FaTelegramPlane from "svelte-icons/fa/FaTelegramPlane.svelte";
+  import FaGithub from "svelte-icons/fa/FaGithub.svelte";
+  import FaVk from "svelte-icons/fa/FaVk.svelte";
 
   let logo = "./img/logo.png";
   let example = "./img/example.jpg";
@@ -54,22 +57,6 @@
   };
 </script>
 
-<!-- <Input placeholder="Label name..." bind:value={label} />
-{#if fileUrl}
-  <img style="width: 200px;" src={fileUrl} />
-{:else}
-  <img src={file} style="width: 200px;" />
-{/if}
-<label>
-  Upload
-  <input
-    style="display: none;"
-    accept="image/*"
-    type="file"
-    on:change|preventDefault={e => uploadImage(e)} />
-</label>
-<button on:click={downloadImage}>Download</button> -->
-
 <div class="container">
   <img src={logo} alt="logo" class="logo" />
   <div class="wrapper">
@@ -98,6 +85,17 @@
       </label>
       <button class="download" on:click={downloadImage}>Download</button>
     </div>
+    <div class="link-wrapper">
+      <a href="https://t.me/lomeat" class="icon-link" target="_blank">
+        <FaTelegramPlane />
+      </a>
+      <a href="https://github.com/lomeat" class="icon-link" target="_blank">
+        <FaGithub />
+      </a>
+      <a href="https://vk.com/lomeat" class="icon-link" target="_blank">
+        <FaVk />
+      </a>
+    </div>
   </div>
 </div>
 
@@ -111,6 +109,7 @@
   :global(body) {
     margin: 0;
     padding: 0;
+    height: 100vh;
   }
 
   :global(*) {
@@ -226,6 +225,27 @@
     cursor: pointer;
     &:hover {
       background: #5492bb;
+    }
+  }
+
+  .link-wrapper {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  a.icon-link {
+    width: 32px;
+    height: 32px;
+    display: block;
+    color: #ccc;
+    cursor: pointer;
+    margin-left: 32px;
+    &:first-child {
+      margin: 0;
+    }
+    &:hover {
+      color: #555;
     }
   }
 </style>
