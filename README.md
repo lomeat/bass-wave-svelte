@@ -1,6 +1,6 @@
 # Bass Wave Constructor on Svelte
 
-It's a remake of older repo on React: https://github.com/lomeat/bass-wave
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=lomeat.bass-wave-svelte)
 
 [Link to app](https://bass-wave.netlify.com/)
 
